@@ -1,0 +1,20 @@
+<div class="container">
+
+    <h1 class="is-size-1 is-family-sans-serif is-link">Points Table</h1>
+    <table class="table is-striped is-hoverable is-fullwidth">
+      <thead>
+        <th>Team</th>
+        <th>Current standings</th>
+        <th>Points</th>
+        <th>Run Rate</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let team of iplTeams">
+          <td>{{team.teamName}}</td>
+          <td>{{team.currentPosition}}</td>
+          <td>{{team.points}}</td>
+          <td>{{team.NRR }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
