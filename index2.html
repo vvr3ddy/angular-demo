@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function findlargest(event) {
+            event.preventDefault();
+         var num1 = parseInt(document.myform1.n1.value);
+         var num2 = parseInt(document.myform1.n2.value);
+        //  document.write(num1+num2)
+         for(var  i = 1; i<=num2; i++){
+             document.write(num1 + "*" + num2 + "="+i*num1+"<br>")
+         }
+        }
+    </script>
+    <form name="myform1">
+        <input type="text" name="n1" id="n1" placeholder="enter first num">
+        <input type="text" name="n2" id="n2" placeholder="enter second num">
+        <input type="submit" value="submit" onclick="findlargest(event)">
+    </form>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d15547.99837561192!2d77.53357187781474!3d13.035697553020483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d13.0441915!2d77.5504773!4m5!1s0x3bae3d6fa0717be5%3A0xe5a944b4af88b25b!2skfc%20near%20me!3m2!1d13.024291!2d77.54894!5e0!3m2!1sen!2sin!4v1619774919432!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+</body>
+
+</html>

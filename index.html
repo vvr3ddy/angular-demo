@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var name = "Vishnu";
+        var salary = 27330;
+        document.write(name + "<br>");
+        document.write(salary + "<br>");
+        var a = 1;
+        var b = "1";
+
+        document.write(a==b);
+        document.write(a===b);
+        function func(arg1, arg2) {
+            var res = arg1 > arg2 ? arg1 : arg2;
+            window.alert(res+"is larger");
+        }
+    </script>
+
+    <button onclick="func(1,2)">tap me</button>
+</body>
+
+</html>
