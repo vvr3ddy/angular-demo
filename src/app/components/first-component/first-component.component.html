@@ -1,0 +1,22 @@
+<div>
+    <h1>Example for Attribute Directives</h1>
+    <h3>This is a Attribute Directives</h3>
+    <span class="display-4" [class.red]="true">Attribute Change</span><br />
+    <span class="display-4" [ngClass]="{'blue':true}">Attribute Change by Using NgClass</span><br />
+    <span [ngStyle]="{'color':'red'}">Attribute Change by Using NgStyle</span>
+    <br /><br />
+    <span class="text-warning" [class.text-warning]="showColor">Attribute Change</span><br />
+    <span [ngClass]="{'brown':showColor}">Attribute Change by Using NgClass</span><br />
+    <input type="button" value="Change Color" (click)="changeColor()" />
+    <br /><br />
+    <span [class.cyan]="showColor">Attribute Change</span><br />
+    <span [ngClass]="{'cyan':showColor, 'red' : !showColor}">Attribute Change by Using NgClass</span><br />
+    <br />
+    <hr>
+    <div [ngSwitch]="'two'">
+        <div *ngSwitchCase="'one'">One is Displayed</div>
+        <div *ngSwitchCase="'two'">Two is Displayed</div>
+        <div *ngSwitchDefault>Default Option is Displayed</div>
+    </div>
+    <hr>
+</div>
