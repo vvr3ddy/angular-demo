@@ -1,1 +1,28 @@
-<p>employee-list works!</p>
+<div class="container">
+    <div class="panel-heading">
+        <h2>Employees List</h2>
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Employee Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let emp of Employees">
+                    <td>{{emp.empId}}</td>
+                    <td>{{emp.empName}}</td>
+                    <td>
+                        <button (click)="deleteEmployee(emp.empId)" class="btn btn-danger">Delete Employee</button>
+                    </td>
+                    <td>
+                        <button (click)="employeeDetails(emp.empId)" class="btn btn-info"
+                            style="margin-left: 10px">Employee Details</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
