@@ -1,28 +1,27 @@
 <div class="container">
-    <div class="panel-heading">
-        <h2>Employees List</h2>
-    </div>
-    <div class="panel-body">
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Employee ID</th>
-                    <th>Employee Name</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let emp of Employees">
-                    <td>{{emp.empId}}</td>
-                    <td>{{emp.empName}}</td>
-                    <td>
-                        <button (click)="deleteEmployee(emp.empId)" class="btn btn-danger">Delete Employee</button>
-                    </td>
-                    <td>
-                        <button (click)="employeeDetails(emp.empId)" class="btn btn-info"
-                            style="margin-left: 10px">Employee Details</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h2>Employee List</h2>
+        </div>
+        <div class="panel-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Emp Id</th>
+                        <th>Emp Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let employee of employees | async">
+                        <td>{{employee.empId}}</td>
+                        <td>{{employee.empName}}</td>
+                        <td><button (click)="deleteEmployee(employee.empId)" class="btn btn-danger">Delete</button>
+                            <button (click)="employeeDetails(employee.empId)" class="btn btn-info"
+                                style="margin-left: 10px">Details</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>

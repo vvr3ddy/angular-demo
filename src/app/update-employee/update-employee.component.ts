@@ -11,11 +11,12 @@ import { EmployeeService } from '../employee.service';
 export class UpdateEmployeeComponent implements OnInit {
   empId: number;
   employee: Employee;
+  submitted = false;
   constructor(private employeeService: EmployeeService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.employee = new Employee();
-    this.empId = this.route.snapshot.params['empId'];
+    this.empId = this.route.snapshot.params['id'];
 
     this.employeeService.getEmployee(this.empId)
       .subscribe(data => {
@@ -27,11 +28,13 @@ export class UpdateEmployeeComponent implements OnInit {
     this.employeeService.updateEmployee(this.empId, this.employee)
       .subscribe(data => {
         console.log(data);
+        this.submitted = false;
         this.employee = new Employee();
         this.gotoList();
       }, err => console.log(err));
   }
   onSubmit() {
+    this.submitted = true;
     this.updateEmployee();
   }
   gotoList() {
